@@ -11,8 +11,8 @@ var max = 0.0
 var nMax = 0
 
 fun main() {
-    for (i in NUM_OF_DICE_FACES - 1..NUM_OF_DICE_FACES)
-        game(i)
+    for (numOfDiceFaces in 1..NUM_OF_DICE_FACES * 2)
+        game(numOfDiceFaces)
     println("\nN: $nMax, ${roundPlus(max * 100, 10)}%")
 }
 
