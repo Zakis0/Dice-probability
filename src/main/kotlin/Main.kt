@@ -9,12 +9,12 @@ const val NUM_OF_DICE_VALUE_REPEAT = 1
 const val DICE_VALUE_TO_COUNT = 1
 
 var maxProbability = 0.0
-var nToMaxProbability = 0
+var numOfDiceToMaxProbability = 0
 
 fun main() {
     for (numOfDiceFaces in NUM_OF_DICE_VALUE_REPEAT..NUM_OF_DICE_FACES * NUM_OF_DICE_VALUE_REPEAT * 2)
         game(numOfDiceFaces)
-    println("\nBeast num of dices: $nToMaxProbability, ${roundPlus(maxProbability * 100, 10)}%")
+    println("\nBeast num of dices: $numOfDiceToMaxProbability, ${roundPlus(maxProbability * 100, 10)}%")
 }
 
 fun game(numOfDice: Int) {
@@ -36,6 +36,6 @@ fun game(numOfDice: Int) {
     println("Num of dice: $numOfDice: ${roundPlus(res * 100, 10)}%")
     if (res > maxProbability) {
         maxProbability = res
-        nToMaxProbability = numOfDice
+        numOfDiceToMaxProbability = numOfDice
     }
 }
